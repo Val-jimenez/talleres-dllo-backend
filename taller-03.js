@@ -1,23 +1,22 @@
 //Punto 1
 
 function desglosarString(str, type) {
-    let count = 0
-    const vocales = 'aeiou'
+    let count = 0;
+    const vocales = 'aeiou';
     if (str === "") {
         return count;
     }
     else {
-        let str2 = str.toLowerCase()
+        let str2 = str.toLowerCase();
         if (type === "vocales") {
-            console.log(str2)
-            count = [...str2].filter(letter => vocales.includes(letter)).length
+            count = [...str2].filter(letter => vocales.includes(letter)).length;
         } else if (type === "consonantes") {
-            count = [...str2].filter(letter => !vocales.includes(letter)).length
+            count = [...str2].filter(letter => !vocales.includes(letter)).length;
         }
     }
     return count;
 }
-console.log(desglosarString("Valeria", "vocales"))
+console.log(desglosarString("Valeria", "vocales"));
 
 //Punto 2
 
@@ -28,7 +27,7 @@ function twoSum(list, sum) {
         return j !== undefined ? [i, list.indexOf(j)] : null;
     }).filter(result => result !== null)[0];
 }
-console.log(twoSum([2, 7, 11, 15], 9))
+console.log(twoSum([2, 7, 11, 15], 9));
 
 //Punto 3
 
